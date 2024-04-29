@@ -1,0 +1,111 @@
+<!doctype html>
+<html data-theme="autumn"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/cd89490de5.js" crossorigin="anonymous"></script>
+<style>
+   @keyframes fadeInBackground {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+#mainImage {
+    animation: fadeInBackground 0.5s ease-out forwards;
+}
+
+.corugette {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.middle-background {
+    background-position-x:1000px !important;
+}
+</style>
+</head>
+<body class="bg-base-300">
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Item 1</a></li>
+            <li>
+              <details>
+                <summary>Parent</summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Button</a>
+        </div>
+      </div>    
+    <div id="mainImage" class="hero min-h-screen max-md:!bg-[top_left_1200px] max-sm:!bg-[top_left_900px]">
+        <div class="hero-overlay bg-opacity-60">
+        </div>
+        <div class="card card-compact w-1/2 bg-base-100 shadow-xl container glass text-white pt-8 mh">
+          <h1 class="corugette text-5xl text-center">Questions</h1>
+          <div class="badge badge-success gap-2 !text-white p-4 mt-2 m-auto">
+            Your invitation is confirmed, you can return to questions at any time by returning and inputting your invitation code
+          </div>
+          <h1 class="corugette text-xl text-center mb-2 mt-4">Would you like to share any comments for the bride or groom?</h1>
+          <textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-3/4 m-auto text-black h-96" ></textarea>
+          <a class=" m-auto mb-6" href="rsvp3.html"><button class="btn btn-lg w-96 btn-accent dosis btn-info mt-4">Next</button></a>
+        </div>
+    </div>
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+        <div class="items-center grid-flow-col">
+          <p>Copyright © <span id="year"></span> Kolten Robison</p>
+        </div> 
+      </footer>
+</body>
+
+<script>
+document.getElementById('mainImage').style.backgroundImage = "url('AXH28193_websafe.jpg')";
+const currentYear = new Date().getFullYear();
+document.getElementById("year").innerHTML = currentYear
+</script>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html data-theme="autumn"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/cd89490de5.js" crossorigin="anonymous"></script>
+<style>
+   @keyframes fadeInBackground {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+#mainImage {
+    animation: fadeInBackground 0.5s ease-out forwards;
+}
+
+.corugette {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.middle-background {
+    background-position-x:1000px !important;
+}
+</style>
+</head>
+<body class="bg-base-300">
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Item 1</a></li>
+            <li>
+              <details>
+                <summary>Parent</summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Button</a>
+        </div>
+      </div>    
+    <div id="mainImage" class="hero min-h-screen max-md:!bg-[top_left_1200px] max-sm:!bg-[top_left_900px]">
+        <div class="hero-overlay bg-opacity-60">
+        </div>
+        <div class="card card-compact w-1/2 bg-base-100 shadow-xl container glass text-white pt-8 mh">
+          <h1 class="corugette text-5xl text-center">Invitation</h1>
+          <div class="overflow-x-auto mb-10">
+            <table class="table corugette">
+              <thead>
+                <tr class="text-white text-xl">
+                  <th>
+                  </th>
+                  <th>Name</th>
+                  <th>Side</th>
+                  <th>Invite Type</th>
+                </tr>
+              </thead>
+              <tbody class="text-xl">
+                <tr>
+                  <th>
+                    <label>
+                      <input type="checkbox" class="checkbox bg-white" />
+                    </label>
+                  </th>
+                  <td>
+                    <span>Kay Quine</span>
+                  </td>
+                  <td>
+                    <span>Groom</span>
+                  </td>
+                  <td><i class="fa-solid fa-person fa-2xl"></i> Guest</td>
+                </tr>
+                <tr>
+                  <th>
+                    <label>
+                      <input type="checkbox" class="checkbox bg-white" />
+                    </label>
+                  </th>
+                  <td>
+                    <span>Sterling Quine</span>
+                  </td>
+                  <td>
+                    <span>Groom</span>
+                  </td>
+                  <td><i class="fa-regular fa-rings-wedding fa-2xl"></i> Ring Bearer</td>
+                </tr>     
+                <tr>
+                  <th>
+                    <label>
+                      <input type="checkbox" class="checkbox bg-white" />
+                    </label>
+                  </th>
+                  <td>
+                    <span>Robert Quine</span>
+                  </td>
+                  <td>
+                    <span>Groom</span>
+                  </td>
+                  <td><i class="fa-solid fa-heart  fa-2xl"></i> In Memoriam</td>
+                </tr>      
+                <tr>
+                  <th>
+                    <label>
+                      <input type="checkbox" class="checkbox bg-white" />
+                    </label>
+                  </th>
+                  <td>
+                    <span>Joshua Robison</span>
+                  </td>
+                  <td>
+                    <span>Groom</span>
+                  </td>
+                  <td><i class="fa-solid fa-user-group  fa-2xl"></i> Wedding Party</td>
+                </tr>       
+                <tr>
+                  <th>
+                    <label>
+                      <input type="checkbox" class="checkbox bg-white" />
+                    </label>
+                  </th>
+                  <td>
+                    <input type="text" placeholder="Guest Name" class="input input-bordered w-full max-w-xs text-black" />
+                  </td>
+                  <td>
+                    <span>Groom</span>
+                  </td>
+                  <td><i class="fa-regular fa-person-circle-plus fa-2xl"></i> Guest (+1)</td>
+                </tr>                                                     
+              </tbody>
+            </table>
+          </div>
+          <div class="stats shadow glass w-96 m-auto mb-6">
+  
+            <div class="stat">
+              <div class="stat-title !text-white">You are confirming</div>
+              <div class="stat-value text-white">3</div>
+              <div class="stat-desc !text-white">of 5 total invites</div>
+            </div>
+            
+          </div>          
+          <a class=" m-auto mb-6" href="rsvp2.html"><button class="btn btn-lg w-96 btn-accent dosis btn-info">Confirm</button></a>
+        </div>
+    </div>
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+        <div class="items-center grid-flow-col">
+          <p>Copyright © <span id="year"></span> Kolten Robison</p>
+        </div> 
+      </footer>
+</body>
+
+<script>
+document.getElementById('mainImage').style.backgroundImage = "url('AXH28193_websafe.jpg')";
+const currentYear = new Date().getFullYear();
+document.getElementById("year").innerHTML = currentYear
+</script>
+</html>
